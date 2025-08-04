@@ -1,0 +1,36 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-img: url(./img/diario-de-uma-paixao.jpeg);
+}
+
+body{
+    background-color: #f6e8d2;
+    font-family: "DM Serif Text", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-size: 2rem;
+    font-style: italic;
+}
+
+header{
+    display: flex;
+    place-content: center;
+}
+
+main{
+    display: flex;
+    place-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.fotos{
+    height: 550px;
+    display: flex;
+    justify-content: center;
+}
