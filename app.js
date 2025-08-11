@@ -21,9 +21,15 @@ function trocarImagem(){
         console.log(nomeImg)
     }
 
+    nomeImg = nomeImg.toLowerCase()
+
     const caminhoImg = `url(./img/${nomeImg}.jpeg)`
 
     document.documentElement.style.setProperty('--bg-img', caminhoImg)
+}
+
+function slideImagens(){
+    
 }
 
 botaoTrocarFoto.addEventListener('click', trocarImagem)
