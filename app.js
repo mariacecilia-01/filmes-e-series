@@ -12,14 +12,32 @@ const digitarTexto = document.getElementById('imagem')
 //     document.documentElement.style.setProperty('--bg-img', img)
 // }
 
-input.addEventListener('change', function(evento){
-    idFoto = (evento.target.value)
-    console.log(idFoto)
-})
+function trocarImagem(){
+    let nomeImg = document.getElementById('input').value.trim()
 
-botaoTrocarFoto.addEventListener('click',function(evento){
-    body.setAttribute.background = "url(`./img${idFoto}`)"
+    while(nomeImg.includes(' ')){
+        nomeImg = nomeImg.replace(' ', '_')
 
-    console.log(botaoTrocarFoto)
-})
+        console.log(nomeImg)
+    }
+
+    const caminhoImg = `url(./img/${nomeImg}.jpeg)`
+
+    document.documentElement.style.setProperty('--bg-img', caminhoImg)
+}
+
+botaoTrocarFoto.addEventListener('click', trocarImagem)
+
+
+
+// input.addEventListener('change', function(evento){
+//     idFoto = (evento.target.value)
+//     console.log(idFoto)
+// })
+
+// botaoTrocarFoto.addEventListener('click',function(evento){
+//     body.setAttribute.background = "url(`./img${idFoto}`)"
+
+//     console.log(botaoTrocarFoto)
+// })
 
